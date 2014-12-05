@@ -11,11 +11,11 @@ import java.io.IOException;
  */
 public class IOUtilsTest {
 
-    @Test
-    public void testToString() throws IOException {
-        String filename = "src/main/java/samples/java/org/apache/commons/io/test.txt";
-        String string = IOUtils.toString(new FileReader(filename));
-        System.out.println(string);
-    }
+  @Test
+  public void testToString() throws IOException {
+    String filename = "src/main/java/samples/java/org/apache/commons/io/test.txt";
+    String string = IOUtils.toString(new FileReader(filename));
+    System.out.println(string);
+  }
 
 }

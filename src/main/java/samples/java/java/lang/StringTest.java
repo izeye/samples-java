@@ -9,11 +9,11 @@ import java.util.Arrays;
  */
 public class StringTest {
 
-    @Test
-    public void split() {
-        String string = "a b  c   d";
-        String[] split = string.split(" ");
-        System.out.println(Arrays.asList(split));
-    }
+  @Test
+  public void split() {
+    String string = "a b  c   d";
+    String[] split = string.split(" ");
+    System.out.println(Arrays.asList(split));
+  }
 
 }

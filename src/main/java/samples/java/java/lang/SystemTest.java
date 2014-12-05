@@ -7,9 +7,9 @@ import org.junit.Test;
  */
 public class SystemTest {
 
-    @Test
-    public void getProperty() {
-        System.out.println(System.getProperty("java.io.tmpdir"));
-    }
+  @Test
+  public void getProperty() {
+    System.out.println(System.getProperty("java.io.tmpdir"));
+  }
 
 }
