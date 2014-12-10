@@ -27,5 +27,6 @@ repositories {
 dependencies {
     compile("org.jsoup:jsoup:1.8.1")
     compile("commons-io:commons-io:2.4")
+    compile("org.ow2.asm:asm:5.0.3")
     compile("junit:junit:4.11")
 }
