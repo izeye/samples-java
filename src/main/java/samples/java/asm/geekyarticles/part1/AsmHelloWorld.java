@@ -1,4 +1,4 @@
-package samples.java.asm.geekyarticles;
+package samples.java.asm.geekyarticles.part1;
 
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Attribute;

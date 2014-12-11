@@ -17,7 +17,7 @@ public class MyClassVisitor extends ClassVisitor {
   public MethodVisitor visitMethod(
       int access, String name, String desc, String signature, String[] exceptions) {
     MethodVisitor methodVisitor =  super.visitMethod(access, name, desc, signature, exceptions);
-    return new MyMethodVisitor(methodVisitor, name);
+    return new MyMethodVisitor(methodVisitor, access, name, desc);
   }
 
 }

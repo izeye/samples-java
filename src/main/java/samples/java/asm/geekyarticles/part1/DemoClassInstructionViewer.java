@@ -1,4 +1,4 @@
-package samples.java.asm.geekyarticles;
+package samples.java.asm.geekyarticles.part1;
 
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
@@ -38,7 +38,7 @@ public class DemoClassInstructionViewer {
   }
 
   public static void main(String[] args) throws IOException {
-    InputStream is = AsmHelloWorld.class.getResourceAsStream("/samples/java/asm/geekyarticles/AsmHelloWorld.class");
+    InputStream is = AsmHelloWorld.class.getResourceAsStream("/samples/java/asm/geekyarticles/part1/AsmHelloWorld.class");
     ClassReader classReader = new ClassReader(is);
     classReader.accept(new MethodPrinterVisitor(Opcodes.ASM5), 0);
   }
