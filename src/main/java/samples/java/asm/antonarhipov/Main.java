@@ -23,7 +23,7 @@ public class Main {
       InstantiationException, InvocationTargetException {
     MyClassLoader classLoader = new MyClassLoader();
 
-    Class clazz = classLoader.findClass("samples.java.asm.classloader.model.Algorithm");
+    Class clazz = classLoader.findClass("samples.java.asm.antonarhipov.model.Algorithm");
     Object algorithm = clazz.newInstance();
 
     Method method = clazz.getDeclaredMethod("run1");

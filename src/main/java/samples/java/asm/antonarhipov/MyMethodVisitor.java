@@ -31,7 +31,7 @@ public class MyMethodVisitor extends MethodVisitor {
 
   @Override
   public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
-    if (desc.equalsIgnoreCase("Lsamples/java/asm/classloader/Trace;") && visible) {
+    if (desc.equalsIgnoreCase("Lsamples/java/asm/antonarhipov/Trace;") && visible) {
       this.trace = true;
     }
     return super.visitAnnotation(desc, visible);
