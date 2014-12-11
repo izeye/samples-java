@@ -1,4 +1,4 @@
-package samples.java.asm.classloader;
+package samples.java.asm.antonarhipov;
 
 import static org.objectweb.asm.Opcodes.ASM5;
 import static org.objectweb.asm.Opcodes.GETSTATIC;

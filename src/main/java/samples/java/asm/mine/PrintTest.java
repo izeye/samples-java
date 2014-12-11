@@ -1,4 +1,4 @@
-package samples.java.asm;
+package samples.java.asm.mine;
 
 /**
  * Created by nbp on 2014-12-11.

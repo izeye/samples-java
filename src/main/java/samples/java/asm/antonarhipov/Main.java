@@ -1,4 +1,4 @@
-package samples.java.asm.classloader;
+package samples.java.asm.antonarhipov;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

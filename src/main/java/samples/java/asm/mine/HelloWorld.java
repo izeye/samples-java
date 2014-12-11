@@ -1,4 +1,4 @@
-package samples.java.asm;
+package samples.java.asm.mine;
 
 /**
  * Created by izeye on 14. 12. 8..

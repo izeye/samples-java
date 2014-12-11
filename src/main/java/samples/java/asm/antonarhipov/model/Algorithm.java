@@ -1,6 +1,6 @@
-package samples.java.asm.classloader.model;
+package samples.java.asm.antonarhipov.model;
 
-import samples.java.asm.classloader.Trace;
+import samples.java.asm.antonarhipov.Trace;
 
 /**
  * Created by izeye on 14. 12. 11..

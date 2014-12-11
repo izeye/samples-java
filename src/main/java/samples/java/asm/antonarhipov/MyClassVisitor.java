@@ -1,4 +1,4 @@
-package samples.java.asm.classloader;
+package samples.java.asm.antonarhipov;
 
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;

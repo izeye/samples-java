@@ -1,4 +1,4 @@
-package samples.java.asm.classloader;
+package samples.java.asm.antonarhipov;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
