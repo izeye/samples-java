@@ -7,31 +7,37 @@ import samples.java.asm.classloader.Trace;
  */
 public class Algorithm {
 
+  /**
+   * A method for test without Trace annotation.
+   */
   public void run1() {
-    int i = 0;
-    i += 1;
-    i += 1;
-    i += 1;
-    i += 1;
-    i++;
-    i++;
-    i++;
-    i++;
-    System.out.println("i = " + i);
+    int value = 0;
+    value += 1;
+    value += 1;
+    value += 1;
+    value += 1;
+    value++;
+    value++;
+    value++;
+    value++;
+    System.out.println("value = " + value);
   }
 
+  /**
+   * A method for test with Trace annotation.
+   */
   @Trace
   public void run2() {
-    int i = 0;
-    i += 1;
-    i += 1;
-    i += 1;
-    i += 1;
-    i++;
-    i++;
-    i++;
-    i++;
-    System.out.println("i = " + i);
+    int value = 0;
+    value += 1;
+    value += 1;
+    value += 1;
+    value += 1;
+    value++;
+    value++;
+    value++;
+    value++;
+    System.out.println("value = " + value);
   }
 
 }

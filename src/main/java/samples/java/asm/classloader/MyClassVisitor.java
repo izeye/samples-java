@@ -14,9 +14,10 @@ public class MyClassVisitor extends ClassVisitor {
   }
 
   @Override
-  public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
-    MethodVisitor mv =  super.visitMethod(access, name, desc, signature, exceptions);
-    return new MyMethodVisitor(mv, name);
+  public MethodVisitor visitMethod(
+      int access, String name, String desc, String signature, String[] exceptions) {
+    MethodVisitor methodVisitor =  super.visitMethod(access, name, desc, signature, exceptions);
+    return new MyMethodVisitor(methodVisitor, name);
   }
 
 }

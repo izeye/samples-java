@@ -5,11 +5,15 @@ package samples.java.asm;
  */
 public class PrintTest {
 
+  /**
+   * A sample printing with concatenation of a string and an integer.
+   * @param args command line arguments
+   */
   public static void main(String[] args) {
-    int i = 0;
-    System.out.println("i = " + i);
-    i++;
-    System.out.println("i = " + i);
+    int value = 0;
+    System.out.println("value = " + value);
+    value++;
+    System.out.println("value = " + value);
   }
 
 }

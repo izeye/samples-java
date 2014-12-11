@@ -13,16 +13,16 @@ public class MyClassLoader extends ClassLoader {
   @Override
   protected Class<?> findClass(String name) throws ClassNotFoundException {
     try {
-      ClassReader cr = new ClassReader(name);
-      ClassWriter cw = new ClassWriter(cr,
+      ClassReader classReader = new ClassReader(name);
+      ClassWriter classWriter = new ClassWriter(classReader,
           ClassWriter.COMPUTE_MAXS | ClassWriter.COMPUTE_FRAMES);
 
-      MyClassVisitor ca = new MyClassVisitor(cw);
+      MyClassVisitor classVisitor = new MyClassVisitor(classWriter);
 
-      cr.accept(ca, ClassReader.EXPAND_FRAMES);
+      classReader.accept(classVisitor, ClassReader.EXPAND_FRAMES);
 
-      byte[] b = cw.toByteArray();
-      return defineClass(name, b, 0, b.length);
+      byte[] bytes = classWriter.toByteArray();
+      return defineClass(name, bytes, 0, bytes.length);
     } catch (IOException e) {
       e.printStackTrace();
     }

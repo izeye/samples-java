@@ -8,19 +8,29 @@ import java.lang.reflect.Method;
  */
 public class Main {
 
+  /**
+   * An ASM sample with a custom class loader.
+   *
+   * @param args command line arguments
+   * @throws ClassNotFoundException    exception
+   * @throws NoSuchMethodException     exception
+   * @throws IllegalAccessException    exception
+   * @throws InstantiationException    exception
+   * @throws InvocationTargetException exception
+   */
   public static void main(String[] args) throws
       ClassNotFoundException, NoSuchMethodException, IllegalAccessException,
       InstantiationException, InvocationTargetException {
-    MyClassLoader cl = new MyClassLoader();
+    MyClassLoader classLoader = new MyClassLoader();
 
-    Class c = cl.findClass("samples.java.asm.classloader.model.Algorithm");
-    Object algorithm = c.newInstance();
+    Class clazz = classLoader.findClass("samples.java.asm.classloader.model.Algorithm");
+    Object algorithm = clazz.newInstance();
 
-    Method m = c.getDeclaredMethod("run1");
-    m.invoke(algorithm);
+    Method method = clazz.getDeclaredMethod("run1");
+    method.invoke(algorithm);
 
-    m = c.getDeclaredMethod("run2");
-    m.invoke(algorithm);
+    method = clazz.getDeclaredMethod("run2");
+    method.invoke(algorithm);
   }
 
 }

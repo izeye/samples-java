@@ -1,9 +1,13 @@
 package samples.java.asm.classloader;
 
+import static org.objectweb.asm.Opcodes.ASM5;
+import static org.objectweb.asm.Opcodes.GETSTATIC;
+import static org.objectweb.asm.Opcodes.ILOAD;
+import static org.objectweb.asm.Opcodes.INVOKEVIRTUAL;
+import static org.objectweb.asm.Opcodes.ISTORE;
+
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.MethodVisitor;
-
-import static org.objectweb.asm.Opcodes.*;
 
 /**
  * Created by izeye on 14. 12. 11..
@@ -14,6 +18,11 @@ public class MyMethodVisitor extends MethodVisitor {
 
   private boolean trace;
 
+  /**
+   * Create a customer method visitor.
+   * @param mv the wrapped method visitor
+   * @param name the method name
+   */
   public MyMethodVisitor(MethodVisitor mv, String name) {
     super(ASM5, mv);
 
@@ -48,7 +57,8 @@ public class MyMethodVisitor extends MethodVisitor {
 
       mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
       mv.visitLdcInsn("In " + name + ": ");
-      mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "print", "(Ljava/lang/String;)V", false);
+      mv.visitMethodInsn(INVOKEVIRTUAL,
+          "java/io/PrintStream", "print", "(Ljava/lang/String;)V", false);
 
       mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
       mv.visitVarInsn(ILOAD, var);

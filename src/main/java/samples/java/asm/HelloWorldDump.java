@@ -76,8 +76,8 @@ public class HelloWorldDump implements Opcodes {
 
   /**
    * Create a HelloWorld class file.
-   * @param args
-   * @throws Exception
+   * @param args command line arguments
+   * @throws Exception exception
    */
   public static void main(String[] args) throws Exception {
     FileOutputStream fos = new FileOutputStream(new File("./HelloWorld.class"));
