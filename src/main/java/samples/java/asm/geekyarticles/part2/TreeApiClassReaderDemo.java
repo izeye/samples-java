@@ -5,8 +5,8 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodNode;
 
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -14,6 +14,11 @@ import java.util.List;
  */
 public class TreeApiClassReaderDemo {
 
+  /**
+   * An ASM sample printing all methods' information.
+   * @param args command line arguments
+   * @throws IOException exception
+   */
   public static void main(String[] args) throws IOException {
     InputStream is = new FileInputStream("./Generated.class");
 

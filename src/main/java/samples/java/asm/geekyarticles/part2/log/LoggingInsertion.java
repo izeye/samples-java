@@ -19,8 +19,8 @@ import org.objectweb.asm.tree.MethodNode;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
+import java.io.IOException;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -29,6 +29,11 @@ import java.util.ListIterator;
  */
 public class LoggingInsertion {
 
+  /**
+   * An ASM sample processing annotation.
+   * @param args command line arguments
+   * @throws IOException exception
+   */
   public static void main(String[] args) throws IOException {
     InputStream is = LoggingInsertion.class.getResourceAsStream(
         "/samples/java/asm/geekyarticles/part2/log/LoggingTest.class");

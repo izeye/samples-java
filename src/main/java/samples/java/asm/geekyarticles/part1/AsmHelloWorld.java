@@ -8,18 +8,25 @@ import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 
-import java.io.IOException;
 import java.io.InputStream;
+import java.io.IOException;
 
 /**
  * Created by izeye on 14. 12. 11..
  */
 public class AsmHelloWorld {
 
+  /**
+   * An ASM sample printing String class information.
+   * @param args command line arguments
+   * @throws IOException exception
+   */
   public static void main(String[] args) throws IOException {
     ClassVisitor classVisitor = new ClassVisitor(Opcodes.ASM5) {
       @Override
-      public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
+      public void visit(
+          int version, int access, String name, String signature, String superName,
+          String[] interfaces) {
         System.out.println("Visiting class: " + name);
         System.out.println("Class major version: " + version);
         System.out.println("Super class: " + superName);
@@ -51,7 +58,8 @@ public class AsmHelloWorld {
       }
 
       @Override
-      public FieldVisitor visitField(int access, String name, String desc, String signature, Object value) {
+      public FieldVisitor visitField(
+          int access, String name, String desc, String signature, Object value) {
         System.out.println("Field: " + name + " " + desc + ", value: " + value);
         return super.visitField(access, name, desc, signature, value);
       }
@@ -63,7 +71,8 @@ public class AsmHelloWorld {
       }
 
       @Override
-      public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
+      public MethodVisitor visitMethod(
+          int access, String name, String desc, String signature, String[] exceptions) {
         System.out.println("Method: " + name + " " + desc);
         return super.visitMethod(access, name, desc, signature, exceptions);
       }

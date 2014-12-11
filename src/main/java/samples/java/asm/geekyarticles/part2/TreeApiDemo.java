@@ -24,6 +24,11 @@ import java.io.IOException;
  */
 public class TreeApiDemo {
 
+  /**
+   * An ASM sample using tree API.
+   * @param args command line arguments
+   * @throws IOException exception
+   */
   public static void main(String[] args) throws IOException {
     ClassNode classNode = new ClassNode(ASM5);
 
