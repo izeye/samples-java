@@ -1,8 +1,8 @@
 buildscript {
     repositories {
         maven { url "http://repo.spring.io/libs-release" }
-        mavenLocal()
         mavenCentral()
+        mavenLocal()
     }
 }
 
@@ -26,8 +26,8 @@ configurations {
 }
 
 repositories {
-    mavenLocal()
     mavenCentral()
+    mavenLocal()
     maven { url "http://repo.spring.io/libs-release" }
 }
 
@@ -39,6 +39,8 @@ dependencies {
     compile("org.ow2.asm:asm-all:5.0.3")
 
     compile("ch.qos.logback:logback-classic:1.1.2")
+
+    compile("org.apache.httpcomponents:httpclient:4.3.6")
 
     compile("junit:junit:4.11")
 
