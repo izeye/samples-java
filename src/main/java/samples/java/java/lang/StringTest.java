@@ -1,5 +1,8 @@
 package samples.java.java.lang;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -14,6 +17,12 @@ public class StringTest {
     String string = "a b  c   d";
     String[] split = string.split(" ");
     System.out.println(Arrays.asList(split));
+  }
+
+  @Test
+  public void replace() {
+    String string = "a,b,c";
+    assertThat(string.replace(',', ' '), is("a b c"));
   }
 
 }
